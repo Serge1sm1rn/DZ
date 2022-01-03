@@ -1,0 +1,32 @@
+#include <iostream>
+#include <locale.h>
+
+using namespace std;
+enum XO : char
+{
+    cross = 'X' , // Крестик
+    zero = 'O' , // Нолик                // Задание №2
+    empt = 'E' , // Пустое место
+};
+int main() 
+{
+    setlocale(LC_ALL, "Russian");
+   
+    ///////////////////////////////////////////////////////////////////
+    int a = 5;
+    double b = 5.5;
+    short int c = -30'000;
+    long long d = -5'145'967'548'175;        // Задание №1
+    float e = 15.85f;
+    char f = 'K';
+    bool g = true;
+    //////////////////////////////////////////////////////////////////
+    XO Player1[1] = { cross };
+    XO Player2[1] = { zero };
+    XO Begining[1] = { empt };                     //Задание №3
+    cout << Player1[0]; // Выводит "X"
+    cout << Player2[0]; // Выводит "O"
+    cout << Begining[0]; // Выводит символ "E" в пустые ячейки
+    ///////////////////////////////////////////////////////////////////
+    return 0;
+}
