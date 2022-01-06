@@ -23,7 +23,7 @@ int main()
     //////////////////////////////////////////////////////////////////
     XO Player1[1] = { cross };
     XO Player2[1] = { zero };
-    XO Begining[1] = { empt };                     //Задание №3
+    XO Begining[1] = { empt };                     //Задание №3.0
     cout << Player1[0]; // Выводит "X"
     cout << Player2[0]; // Выводит "O"
     cout << Begining[0]; // Выводит символ "E" в пустые ячейки
