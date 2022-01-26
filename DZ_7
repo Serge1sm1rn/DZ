@@ -1,0 +1,139 @@
+>>>>>>>>>>>>>>>
+//FILE MAIN.CPP
+>>>>>>>>>>>>>>>
+
+#include <iostream>
+#include "Mylib.h"
+#include <locale.h>
+#define N 7
+#define SwapINT(f,l)\
+while (mas[f] < mid) f++;\
+while (mas[l] > mid) l--;\
+if (f <= l)\
+{\
+    count = mas[f];\
+    mas[f] = mas[l];\
+    mas[l] = count;\
+    f++;\
+    l--;\
+}\
+
+#define NUM \
+if (a >= 0 && a <= b)\
+{\
+std::cout << "true";\
+}\
+else\
+{\
+std::cout << "faulse"; \
+}\
+
+using namespace std;
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+/*
+int main(int argc, char* argv[])
+{
+    setlocale(LC_ALL, "Russian");
+
+	
+	const int size = 5;
+	float arr[size] = { 1.15f, -7.39f, -4.75f, 3.15f, 8.85f };
+	printArray(arr, size); 
+    int a = 0, b = 0;
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] <  0)                                               //Задание№1
+            a++;
+        else
+            b++;
+    }
+    cout << endl;
+    cout << "Положительных = " << b << endl;
+    cout << "Отрицательных = " << a << endl;
+    system("pause");
+    return 0;
+}
+*/
+///////////////////////////////////////////////////////////////////////////////////////
+// 
+///////////////////////////////////////////////////////////////////////////////////////
+/*
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+
+    int a ;
+    int b ;
+
+    cout << "Введите число а : ";                    //Задание №2
+    cin >> a;
+    cout << "Введите число b : ";
+    cin >> b;
+    
+    NUM;
+    return 0;
+
+}
+*/
+//////////////////////////////////////////////////////////////////////////////////////
+//
+/////////////////////////////////////////////////////////////////////////////////////
+/*
+int first, last; //быстрая сортировка
+void quicksort(int* mas, int first, int last)
+{
+    int mid, count;
+    int f = first, l = last;
+    mid = mas[(f + l) / 2]; 
+    do
+    {
+        SwapINT(f, l);
+    } while (f < l);
+    if (first < l) quicksort(mas, first, l);
+    if (f < last) quicksort(mas, f, last);
+}
+//главная функция
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+                                                           //Задание №3
+    int* A = new int[N];
+    cout << "Исходный массив: ";
+    for (int i = 0; i < N; i++)
+    {
+        A[i] = rand() % 10;
+        cout << A[i] << " ";
+    }
+    first = 0; last = N - 1;
+    quicksort(A, first, last);
+    cout << endl << "Отсортированый массив: ";
+    for (int i = 0; i < N; i++) cout << A[i] << " ";
+    delete[]A;
+    system("pause>>void");
+}
+*/
+///////////////////////////////////////////////////////////////////////
+
+>>>>>>>>>>>>>>>
+//FILE Mylib.h
+>>>>>>>>>>>>>>>
+
+#pragma once
+void printArray(const float array[], int size); 
+
+/////////////////////////////////////////////////////////////////////
+
+>>>>>>>>>>>>>>>>
+//FILE Mylib.cpp
+>>>>>>>>>>>>>>>>
+
+#include <iostream>
+void printArray(const float array[], int size) // Реализация функции (вывод массива на экран)
+{
+	for (int i = 0; i < size; i++)
+		std::cout << array[i] << " ";
+}
