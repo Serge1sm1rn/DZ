@@ -1,0 +1,44 @@
+/*
+#include <iostream>
+using namespace std;
+
+void printArray(int* array, size_t arraySize)
+{
+
+for (size_t i = 0; i < arraySize; i++)
+{
+cout << array[i] << " ";
+}
+cout << endl;
+}
+
+void initArray(int* arr,const size_t size)
+{
+
+arr[0] = 1;
+for (size_t i = 1; i < size; i++)
+{
+arr[i] = arr[i - 1] << 1;
+}
+
+
+
+}
+
+void job1()
+{
+size_t size = 14;
+int* arr = new (nothrow) int[size];
+
+if (arr != nullptr)
+{
+initArray(arr, size);
+printArray(arr, size);
+delete[] arr;
+
+}
+
+ // К сожалению смог только списать, но обещаю разобраться)
+
+}
+*/
